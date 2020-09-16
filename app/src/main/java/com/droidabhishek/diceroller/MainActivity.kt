@@ -18,10 +18,10 @@ import kotlin.random.Random
     }
 
      private fun rollDice() {
-         val resultText: TextView = findViewById(R.id.result_text)
+
 
          val randomInt = java.util.Random().nextInt(6) + 1
 
-         resultText.text = randomInt.toString()                                //Code
+
      }
  }
