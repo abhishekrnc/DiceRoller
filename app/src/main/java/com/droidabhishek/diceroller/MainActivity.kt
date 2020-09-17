@@ -9,6 +9,9 @@ import android.widget.Toast
 import kotlin.random.Random
 
  class MainActivity : AppCompatActivity() {
+
+     lateinit var diceImage: ImageView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -16,6 +19,8 @@ import kotlin.random.Random
         rollButton.setOnClickListener {
            rollDice()
         }
+
+        diceImage = findViewById(R.id.dice_image)
     }
 
      private fun rollDice() {
@@ -31,7 +36,6 @@ import kotlin.random.Random
              else -> R.drawable.dice_6
          }
 
-         val diceImage: ImageView = findViewById(R.id.dice_image)
          diceImage.setImageResource(drawableResource)
 
      }
